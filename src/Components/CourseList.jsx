@@ -1,4 +1,3 @@
-import React from "react";
 import CourseCard from "./CourseCard";
 const courses = [
   {
@@ -18,7 +17,7 @@ const courses = [
       "lesson on planning design concept and proper planning of work",
     imageUrl: "/images/img2.jpg",
     rate: "4",
-    tags: ["UI/UX design", "web design"],
+    tags: ["UI/UX design", "Web Design"],
     start: "2023-07-01T20:46:30.615Z",
     status: "Upcoming",
   },
@@ -37,9 +36,9 @@ const courses = [
 const CourseList = () => {
   return (
     <div className="corse-list">
-      {courses.map((course) => {
-        return <CourseCard key={course.id} />;
-      })}
+      {courses.map((course) => (
+        <CourseCard key={course.id} course={course} />
+      ))}
     </div>
   );
 };
